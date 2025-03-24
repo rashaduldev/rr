@@ -11,6 +11,7 @@ import Image from "next/image";
 import { Input } from "./ui/input";
 import ExtraLogin from "./ExtraLogin";
 import { signOut } from "next-auth/react";
+import dummyImg from "../../public/assets/dummy-user-profile.webp";
 
 const NormalLinks = [
   { name: "home", path: "/" },
@@ -28,7 +29,7 @@ const DashboardLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-const MobileNav = ({session}) => {  
+const MobileNav = ({session, isLoggedIn}) => {  
   const pathname = usePathname();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
@@ -57,21 +58,20 @@ const MobileNav = ({session}) => {
         </SheetTrigger>
 
         <SheetContent className="flex flex-col items-center gap-6 p-6">
-          {session?.user?.image ? (
+          {session?.user?.image || isLoggedIn ? (
             <Image
-              src={session.user.image}
+              src={session?.user?.image || dummyImg}
               alt="User Avatar"
               width={64}
               height={64}
               className="w-20 h-20 rounded-full mt-32"
             />
           ) : (
-            <h1 className="text-2xl font-semibold mt-32">
-              {`{dummy avatar}`} <span className="text-accent">.</span>
-            </h1>
+            <p className="text-white"></p>
           )}
 
-          {/* ✅ Render dynamic links based on route */}
+          {session?.user?.email && <p className="text-white text-sm">{session.user.email}</p>}
+
           {links.map((link) => (
             <Link
               key={link.path}
@@ -82,7 +82,7 @@ const MobileNav = ({session}) => {
             </Link>
           ))}
 
-          {session?.user ? (
+          {(session?.user || isLoggedIn) ? (
             <Button onClick={() => signOut()} className="w-full">
               Log out
             </Button>

@@ -155,7 +155,7 @@ const Header = ({ session }) => {
             timer: 1500,
             showConfirmButton: false,
           }).then(() => {
-            setIsLogin(true);
+            setIsLogin(false);
           });
         } else {
           Swal.fire({
@@ -237,7 +237,7 @@ const Header = ({ session }) => {
           </div>
 
           <div className="xl:hidden">
-            <MobileNav session={session} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+            <MobileNav session={session} isLoggedIn={isLoggedIn} userEmail={userEmail} setIsMobileMenuOpen={setIsMobileMenuOpen} />
             {isMobileMenuOpen && (
               <Button onClick={() => setIsModalOpen(true)}>Log in</Button>
             )}
