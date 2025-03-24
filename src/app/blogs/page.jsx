@@ -16,7 +16,7 @@ export default function Blogs() {
             {blogPosts.map((post) => (
               <div
                 key={post.id}
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-accent"
               >
                 <Image
                 height={200}
@@ -25,12 +25,12 @@ export default function Blogs() {
                   alt={post.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="p-6">
-                  <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <div className="p-6 bg-slate-500 h-full">
+                  <h2 className="text-xl text-gray-100 font-semibold mb-2">{post.title}</h2>
+                  <p className="text-gray-100 mb-4">{post.excerpt}</p>
                   <p className="text-gray-500 text-sm mb-4">{post.date}</p>
                   <Link href={`/blog/${post.id}`}>
-                    <Button className="bg-blue-500 hover:bg-blue-600">
+                    <Button className="bg-accent hover:bg-accent-hover">
                       Read More
                     </Button>
                   </Link>

@@ -7,7 +7,7 @@ export const blogPosts = [
       content:
         "Over the past five years, I’ve been working as a web developer, specializing in frontend technologies like React and Next.js. In this blog, I share my journey, from my first HTML page to building complex applications. I’ve learned the importance of clean code, responsive design, and user experience. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       date: "March 20, 2025",
-      image: "https://via.placeholder.com/600x400?text=Blog+1",
+      image: "https://res.cloudinary.com/de8yddexc/image/upload/v1742808636/resume/vxhwxeq3evlfnbhsdokv.jpg",
       likes: 42,
     },
     {
@@ -17,7 +17,7 @@ export const blogPosts = [
       content:
         "Responsive design is crucial in today’s multi-device world. In this blog, I share my top 5 tips for building responsive websites, including using Tailwind CSS, media queries, and flexible layouts. These techniques have helped me create seamless user experiences across devices. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       date: "March 15, 2025",
-      image: "https://via.placeholder.com/600x400?text=Blog+2",
+      image: "https://res.cloudinary.com/de8yddexc/image/upload/v1742808635/resume/llu1zpmc7ul1czsmdyz0.webp",
       likes: 28,
     },
     {
@@ -27,7 +27,7 @@ export const blogPosts = [
       content:
         "Contributing to open source has been a game-changer for my career. In this blog, I discuss why I love open source, how it has helped me grow as a developer, and tips for getting started. It’s a great way to give back to the community and learn new skills. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       date: "March 10, 2025",
-      image: "https://via.placeholder.com/600x400?text=Blog+3",
+      image: "https://res.cloudinary.com/de8yddexc/image/upload/v1742808599/resume/q82mzqar7gla20ujkp7p.webp",
       likes: 15,
     },
   ];
