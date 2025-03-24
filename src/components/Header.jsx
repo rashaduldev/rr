@@ -283,7 +283,7 @@ const Header = ({ session }) => {
                 <label className="block text-sm font-medium">Email Address</label>
                 <Input
                   {...register("email")}
-                  className="w-full mt-1 p-2 border rounded text-black"
+                  className="w-full mt-1 p-2 border rounded"
                   placeholder="Enter your email"
                 />
                 <p className="text-red-500 text-xs">{errors.email?.message}</p>
@@ -296,7 +296,7 @@ const Header = ({ session }) => {
                     <Input
                       {...register("password")}
                       type={showPassword ? "text" : "password"}
-                      className="w-full mt-1 p-2 border rounded text-black"
+                      className="w-full mt-1 p-2 border rounded"
                       placeholder="Enter your password"
                     />
                     <span
@@ -324,7 +324,7 @@ const Header = ({ session }) => {
                       <Input
                         {...register("confirmPassword")}
                         type={showConfirmPassword ? "text" : "password"}
-                        className="w-full mt-1 p-2 border rounded text-black"
+                        className="w-full mt-1 p-2 border rounded"
                         placeholder="Confirm your password"
                       />
                       <span
